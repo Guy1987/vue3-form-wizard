@@ -5,8 +5,8 @@
   "version": "0.2.4",
   "description": "vue3-form-wizard is a vue based component with no external depenendcies which simplifies tab wizard management.",
   "license": "MIT",
-  "repository": "https://github.com/parsajiravand/vue3-form-wizard",
-  "homepage": "https://github.com/parsajiravand/vue3-form-wizard",
+  "repository": "https://github.com/Guy1987/vue3-form-wizard",
+  "homepage": "https://github.com/Guy1987/vue3-form-wizard",
   "files": [
     "dist"
   ],

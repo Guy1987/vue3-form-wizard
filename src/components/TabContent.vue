@@ -1,12 +1,16 @@
 <template>
-  <div v-show="active" v-if="!lazy || active" class="wizard-tab-container"
-       role="tabpanel"
-       :id="tabId"
-       :aria-hidden="!active"
-       :aria-labelledby="`step-${tabId}`">
+  <div
+    v-show="active"
+    v-if="!lazy || active"
+    class="wizard-tab-container"
+    role="tabpanel"
+    :id="tabId"
+    :aria-hidden="!active"
+    :aria-labelledby="`step-${tabId}`"
+  >
     <slot :active="active">
     </slot>
-          <slot name="customIcon"></slot>
+    <slot name="customIcon"></slot>
   </div>
 </template>
 <script>
