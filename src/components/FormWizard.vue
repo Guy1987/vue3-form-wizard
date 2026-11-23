@@ -48,6 +48,7 @@
             :disable-back-on-click-step="
               disableBack ? true : disableBackOnClickStep
             "
+            :disable-back="disableBack"
           >
           </wizard-step>
         </slot>

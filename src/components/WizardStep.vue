@@ -1,13 +1,13 @@
 <template>
   <li :class="{ active: tab.active }">
-    <a :class="{ disabled: !tab.checked }" :style="cursorStyle">
+    <a :class="{ disabled: disableBack || !tab.checked }" :style="cursorStyle">
       <div
         class="wizard-icon-circle md"
         role="tab"
-        :tabindex="tab.checked ? 0 : ''"
+        :tabindex="disableBack ? -1 : tab.checked ? 0 : ''"
         :id="`step-${tab.tabId}`"
         :aria-controls="tab.tabId"
-        :aria-disabled="tab.active"
+        :aria-disabled="disableBack ? true : disableBackOnClickStep"
         :aria-selected="tab.active"
         :class="{
           checked: tab.checked,
@@ -88,6 +88,10 @@ export default {
       default: 0,
     },
     disableBackOnClickStep: {
+      type: Boolean,
+      default: false,
+    },
+    disableBack: {
       type: Boolean,
       default: false,
     },
